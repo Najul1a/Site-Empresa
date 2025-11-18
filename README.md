@@ -74,9 +74,9 @@ ODS **3, 9, 10, 11 e 16**.
 
 ---
 
-## 5. Stack de Desenvolvimento
+## 5. Tecnologias Ultilizadas
 
-### 🌐 Web (Site Institucional)
+### 🌐 Site Institucional
 | Categoria | Tecnologia | Uso |
 |-----------|------------|-----|
 | Framework | `React 19.2.0` | Interface SPA |
