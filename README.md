@@ -87,7 +87,7 @@ ODS **3, 9, 10, 11 e 16**.
 
 ---
 
-## 6. Instalação e Execução
+## 6. Instalação
 
 ### 📦 Pré-requisitos
 - Node.js + npm (ou yarn)
