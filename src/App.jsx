@@ -1,7 +1,10 @@
+import { BrowserRouter, Routes, Route } from "react-router"; 
+import Header from "./Components/header/Header";
 import Funcionarios from "./pages/Funcionarios";
 import Inicio from "./pages/Inicio";
 import Projeto1 from "./pages/Projeto1";
 import Projeto2 from "./pages/Projeto2";
+import "./App.css";
 
 function App() {
   const handleNavLinkClick = (event) => {
@@ -17,23 +20,12 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/ProgressaoDeLeitura"
-              element={<ProgressaoDeLeitura />}
-            />
-            <Route path="/Cadastrar" element={<Cadastrar />} />
-
-            <Route path="/Inicio" element={<Inicio />} />
-            <Route path="/Projeto1" element={<Projeto1/>} />
+            <Route path="/" element={<Inicio />} />
+            <Route path="/ProgressaoDeLeitura" element={<Projeto1 />} />
+            <Route path="/Funcionarios" element={<Funcionarios />} />
             <Route path="/Projeto2" element={<Projeto2 />} />
-            <Route path="/Funcionarios" element={<Funcionarios/>} />
-          
-
           </Routes>
-          
         </main>
-       
       </BrowserRouter>
     </>
   );
