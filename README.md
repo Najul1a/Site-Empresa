@@ -11,7 +11,7 @@
 ---
 
 ## 1. Visão Geral da SafeGirls
-A **SafeGirls** é uma empresa de inovação social e tecnologia dedicada a construir um futuro mais seguro, inclusivo e equitativo. Nossa missão é proteger populações vulneráveis — mulheres, crianças, idosos e pessoas com baixa familiaridade digital — contra ameaças nos **ambientes online e físico**.
+A **SafeGirls** é uma empresa de inovação social e tecnologia dedicada a construir um futuro mais seguro, inclusivo e equitativo. Nossa missão é proteger populações vulneráveis: mulheres, crianças, idosos e pessoas com baixa familiaridade digital contra ameaças nos **ambientes online e físico**.
 
 Desenvolvemos soluções baseadas em **Inteligência Artificial (IA)** e **Internet das Coisas (IoT)** focadas em duas frentes estratégicas:
 
@@ -36,17 +36,17 @@ Alinhado aos **ODS 3, 9, 10, 11 e 16**, promovemos inovação acessível e impac
 
 | Nome | GitHub |
 |------|--------|
-| Ana Clara Chiaramonte | — |
-| Juliana Fulanetto | — |
-| Ana Julia Geremias | — |
-| Livia Solla | — |
-| Beatriz Silva | — |
+| Ana Clara Chiaramonte | https://github.com/AnaChiaramonte |
+| Juliana Fulanetto | https://github.com/JulianaFulanetto |
+| Ana Julia Geremias | https://github.com/Najul1a |
+| Livia Solla | https://github.com/L1vias |
+| Beatriz Silva | https://github.com/BiaS1lva6 |
 
 Time multidisciplinar com metodologias ágeis e foco em impacto social.
 
 ---
 
-## 3. Projeto 1 — SafeGuard (Sistema de Alerta em Tempo Real)
+## 3. Projeto 1 — SafeGuard
 Assistente digital com **IA** para proteger usuários com baixa familiaridade digital contra golpes e desinformação.
 
 ### 🔑 Funcionalidades
@@ -60,8 +60,8 @@ Foco nos ODS **9, 10 e 16**.
 
 ---
 
-## 4. Projeto 2 — SafeWaves (Plataforma de Suporte e Conexão)
-Solução inteligente de cuidado preventivo usando **Wi-Fi + IoT** de baixo custo, **sem câmeras**, com monitoramento não invasivo.
+## 4. Projeto 2 — SafeWaves
+Solução inteligente de cuidado preventivo usando **Wi-Fi + IoT** de baixo custo, com monitoramento não invasivo.
 
 ### 🔑 Funcionalidades
 - **Monitoramento Não Invasivo**
@@ -85,13 +85,6 @@ ODS **3, 9, 10, 11 e 16**.
 | UI | `bootstrap 5.3.8`, `bootstrap-icons` | Estilização |
 | Build | `Vite` | Ambiente dev e build |
 
-### 📱 Aplicativos Mobile (SafeGuard & SafeWaves)
-- **React Native**
-- **Expo**
-- **JavaScript (ES6+)**
-- **React Navigation**
-- **Expo Vector Icons**
-
 ---
 
 ## 6. Instalação e Execução
@@ -106,3 +99,4 @@ cd nome-do-repositorio
 npm install
 # ou
 yarn install
+
