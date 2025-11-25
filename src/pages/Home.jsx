@@ -1,6 +1,7 @@
 import { Link } from "react-router"
 import { Navigation } from "../Components/Navigation"
 import { Footer } from "../Components/Footer"
+import Logo from "../img/logo.png"
 
 export default function Home() {
   return (
@@ -40,9 +41,9 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="text-center py-5">
-                  <div className="logo-icon mx-auto" style={{ width: "120px", height: "120px" }}>
-                    <i className="bi bi-shield-fill-check" style={{ fontSize: "60px" }}></i>
+                  <div className="text-center ">
+                  <div className="justify-content-center" style={{ width: "350px", height: "200px" }}>
+                    <img src={Logo} alt="SafeGirls Logo" className="w-100 h-100 object-fit-contain" />
                   </div>
                 </div>
               </div>

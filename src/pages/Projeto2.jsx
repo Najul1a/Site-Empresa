@@ -29,7 +29,7 @@ export default function Projeto2() {
           <div className="container py-5">
             <div className="row">
               <div className="col-lg-10">
-                <div className="badge-projeto mb-4">
+                <div className="badge-custom mb-4">
                   <i className="bi bi-activity"></i>
                   <span>Monitoramento Preventivo IoT</span>
                 </div>

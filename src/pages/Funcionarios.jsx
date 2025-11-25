@@ -1,33 +1,44 @@
 import { Navigation } from "../Components/Navigation"
 import { Footer } from "../Components/Footer"
+import BiaImg from "../img/bia.png"
+import AnaJImg from "../img/ana.jpg"
+import LiviaImg from "../img/li.png"
+import AnaCImg from "../img/anal.png"
+import JuImg from "../img/ju.png"
 
 const teamMembers = [
   {
-    name: "Beatriz Nascimento",
-    role: "Desenvolvedora Frontend",
-    description: "Especialista em React e UI/UX Design",
+    name: "Beatriz Silva",
+    role: "Desenvolvedora Fullstack",
+    github: "https://github.com/BiaS1lva6",
+    image: BiaImg,
   },
   {
     name: "Ana Julia Geremias",
-    role: "Desenvolvedora Backend",
-    description: "Focada em Node.js e arquitetura de APIs",
+    role: "Desenvolvedora Fullstack",
+    github: "https://github.com/Najul1a",
+    image: AnaJImg,
   },
   {
     name: "Lívia Solla",
     role: "Gerente de Projetos",
-    description: "Experiência em metodologias ágeis e gestão de equipes",
+    github: "https://github.com/L1vias",
+    image: LiviaImg,
   },
   {
     name: "Ana Clara Lopes",
-    role: "Analista de Dados",
-    description: "Especialista em análise de dados e visualização",
+    role: "Desenvolvedora Fullstack",
+    github: "https://github.com/AnaChiaramonte",
+    image: AnaCImg,
   },
   {
-    name: "Juliana Furlanetto",
-    role: "Especialista em Segurança",
-    description: "Focada em segurança cibernética e proteção de dados",
+    name: "Juliana Fulanetto",
+    role: "Desenvolvedora Fullstack",
+    github: "https://github.com/JulianaFulanetto",
+    image: JuImg,
   },
-]
+];
+
 
 export default function Funcionarios() {
   return (
@@ -53,32 +64,51 @@ export default function Funcionarios() {
         {/* Team Grid */}
         <section className="bg-white py-5">
           <div className="container py-5">
-            <div className="row g-4">
+            <div className="row g-4 justify-content-center">
               {teamMembers.map((member, index) => (
                 <div key={index} className="col-md-6 col-lg-4">
-                  <div className="team-card h-100">
-                    <div className="team-avatar mb-4">{member.name.charAt(0)}</div>
+                  <div className="team-card h-100 text-center">
+                    <div className="team-avatar mb-4">
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} />
+                      ) : (
+                        member.name.charAt(0)
+                      )}
+                    </div>
 
                     <h3 className="h5 fw-bold text-gray-900 mb-2">{member.name}</h3>
                     <p className="text-blue-600 fw-semibold mb-3 small">{member.role}</p>
-                    <p className="text-gray-600 small mb-0">{member.description}</p>
+                    <a 
+                      href={member.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-600 small text-decoration-none d-inline-flex align-items-center gap-2 hover-link"
+                    >
+                      <i className="bi bi-github fs-5"></i>
+                      <span>{member.github.replace('https://github.com/', '@')}</span>
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* CTA Section */}
-            <div className="row mt-5 pt-5">
+             <div className="row mt-5 pt-5">
               <div className="col-lg-10 col-xl-8 mx-auto">
                 <div className="cta-section text-center">
                   <h2 className="h2 fw-bold text-white mb-3">Interessado em Trabalhar com a Gente?</h2>
                   <p className="fs-5 text-white mb-4" style={{ opacity: 0.9 }}>
                     Estamos sempre em busca de talentos excepcionais para fazer parte da nossa missão
                   </p>
-                  <button className="btn btn-blue-custom bg-white text-blue-700 border-0">
+                  <a 
+                    href="https://wa.me/5514988381891" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-blue-custom bg-white text-blue-700 border-0 text-decoration-none"
+                  >
                     Solicitar Proposta no WhatsApp
                     <i className="bi bi-arrow-right ms-2"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
