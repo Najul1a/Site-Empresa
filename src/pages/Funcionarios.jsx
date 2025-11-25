@@ -1,121 +1,92 @@
-import React from "react";
-import Footer from "../Components/footer/Footer";
+import { Navigation } from "../Components/Navigation"
+import { Footer } from "../Components/Footer"
+
+const teamMembers = [
+  {
+    name: "Beatriz Nascimento",
+    role: "Desenvolvedora Frontend",
+    description: "Especialista em React e UI/UX Design",
+  },
+  {
+    name: "Ana Julia Geremias",
+    role: "Desenvolvedora Backend",
+    description: "Focada em Node.js e arquitetura de APIs",
+  },
+  {
+    name: "Lívia Solla",
+    role: "Gerente de Projetos",
+    description: "Experiência em metodologias ágeis e gestão de equipes",
+  },
+  {
+    name: "Ana Clara Lopes",
+    role: "Analista de Dados",
+    description: "Especialista em análise de dados e visualização",
+  },
+  {
+    name: "Juliana Furlanetto",
+    role: "Especialista em Segurança",
+    description: "Focada em segurança cibernética e proteção de dados",
+  },
+]
 
 export default function Funcionarios() {
-  const whatsappLink =
-    "https://wa.me/5511999999999?text=Olá! Gostaria de solicitar uma proposta.";
-
   return (
-    <div className="page-container">
-      <h1 className="title">Nossa Equipe</h1>
-      <p className="section-description">
-        Conheça os profissionais que fazem a Safe Girls funcionar
-      </p>
+    <div className="d-flex flex-column min-vh-100">
+      <Navigation />
 
-      <div className="employees-grid">
-        {/* Funcionário 1 */}
-        <div className="employee-card">
-          <div className="employee-avatar">
-            <img
-              src="/src/img/bia.jpg"
-              alt="Foto de Beatriz Nascimento"
-              onError={(e) => {
-                e.target.src = "/src/img/default-avatar.png";
-              }}
-            />
+      <main className="flex-grow-1">
+        {/* Hero Section */}
+        <section className="hero-section py-5">
+          <div className="hero-gradient"></div>
+          <div className="container position-relative py-5">
+            <div className="row">
+              <div className="col-lg-8">
+                <h1 className="display-2 fw-bold text-gray-900 mb-4 lh-sm">
+                  Nossa <span className="gradient-text-blue">Equipe</span>
+                </h1>
+                <p className="fs-4 text-gray-600">Conheça os profissionais que fazem a SafeGirls funcionar</p>
+              </div>
+            </div>
           </div>
-          <h3 className="employee-name">Beatriz Nascimento</h3>
-          <p className="employee-role">Desenvolvedora Frontend</p>
-          <p className="employee-experience">
-            Especialista em React e UI/UX Design.
-          </p>
-        </div>
+        </section>
 
-        {/* Funcionário 2 */}
-        <div className="employee-card">
-          <div className="employee-avatar">
-            <img
-              src="/src/img/ana.jpg"
-              alt="Foto de Ana Julia Geremias"
-              onError={(e) => {
-                e.target.src = "/src/img/default-avatar.png";
-              }}
-            />
+        {/* Team Grid */}
+        <section className="bg-white py-5">
+          <div className="container py-5">
+            <div className="row g-4">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="col-md-6 col-lg-4">
+                  <div className="team-card h-100">
+                    <div className="team-avatar mb-4">{member.name.charAt(0)}</div>
+
+                    <h3 className="h5 fw-bold text-gray-900 mb-2">{member.name}</h3>
+                    <p className="text-blue-600 fw-semibold mb-3 small">{member.role}</p>
+                    <p className="text-gray-600 small mb-0">{member.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Section */}
+            <div className="row mt-5 pt-5">
+              <div className="col-lg-10 col-xl-8 mx-auto">
+                <div className="cta-section text-center">
+                  <h2 className="h2 fw-bold text-white mb-3">Interessado em Trabalhar com a Gente?</h2>
+                  <p className="fs-5 text-white mb-4" style={{ opacity: 0.9 }}>
+                    Estamos sempre em busca de talentos excepcionais para fazer parte da nossa missão
+                  </p>
+                  <button className="btn btn-blue-custom bg-white text-blue-700 border-0">
+                    Solicitar Proposta no WhatsApp
+                    <i className="bi bi-arrow-right ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3 className="employee-name">Ana Julia Geremias</h3>
-          <p className="employee-role">Desenvolvedora Backend</p>
-          <p className="employee-experience">
-            Focada em Node.js e arquitetura de APIs.
-          </p>
-        </div>
+        </section>
+      </main>
 
-        {/* Funcionário 3 */}
-        <div className="employee-card">
-          <div className="employee-avatar">
-            <img
-              src="/src/img/funcionario3.png"
-              alt="Foto de Livia Solla"
-              onError={(e) => {
-                e.target.src = "/src/img/default-avatar.png";
-              }}
-            />
-          </div>
-          <h3 className="employee-name">Livia Solla</h3>
-          <p className="employee-role">Gerente de Projetos</p>
-          <p className="employee-experience">
-            Experiência em metodologias ágeis e gestão de equipes.
-          </p>
-        </div>
-
-        {/* Funcionário 4 */}
-        <div className="employee-card">
-          <div className="employee-avatar">
-            <img
-              src="/src/img/anal.png"
-              alt="Foto de Ana Clara Lopes"
-              onError={(e) => {
-                e.target.src = "/src/img/default-avatar.png";
-              }}
-            />
-          </div>
-          <h3 className="employee-name">Ana Clara Lopes</h3>
-          <p className="employee-role">Analista de Dados</p>
-          <p className="employee-experience">
-            Especialista em análise de dados e visualização.
-          </p>
-        </div>
-
-        {/* Funcionário 5 */}
-        <div className="employee-card">
-          <div className="employee-avatar">
-            <img
-              src="/src/img/funcionario5.png"
-              alt="Foto de Juliana Furlanetto"
-              onError={(e) => {
-                e.target.src = "/src/img/default-avatar.png";
-              }}
-            />
-          </div>
-          <h3 className="employee-name">Juliana Furlanetto</h3>
-          <p className="employee-role">Especialista em Segurança</p>
-          <p className="employee-experience">
-            Focada em segurança cibernética e proteção de dados.
-          </p>
-        </div>
-      </div>
-
-      <div className="cta-section">
-        <h2>Interessado em Trabalhar com a Gente?</h2>
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-black"
-        >
-          Solicitar Proposta no WhatsApp
-        </a>
-      </div>
       <Footer />
     </div>
-  );
+  )
 }

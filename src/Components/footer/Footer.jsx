@@ -1,35 +1,74 @@
-import React from 'react';
-import './Footer.css';
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h3>Sobre Nós</h3>
-          <p>TechPro - Soluções tecnológicas inovadoras para seu negócio.</p>
-        </div>
-        
-        <div className="footer-section">
-          <h3>Links Rápidos</h3>
-          <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/funcionarios">Funcionários</a></li>
-            <li><a href="/projeto1">Projeto 1</a></li>
-            <li><a href="/projeto2">Projeto 2</a></li>
-          </ul>
-        </div>
+    <footer className="footer-custom">
+      <Container>
+        <Row className="mb-5">
+          <Col md={6} className="mb-4 mb-md-0">
+            <h3 className="gradient-text-blue fw-bold mb-3">SafeGirls</h3>
+            <p className="text-gray-600 pe-md-5">
+              Inovação em primeiro lugar. Desenvolvemos soluções inteligentes
+              que unem tecnologia e empatia para ampliar a segurança pessoal.
+            </p>
+          </Col>
 
-        <div className="footer-section">
-          <h3>Contato</h3>
-          <p>Email: contato@techpro.com</p>
-          <p>Telefone: (11) 9999-9999</p>
-        </div>
-      </div>
+          <Col md={3} className="mb-4 mb-md-0">
+            <h4 className="text-gray-800 fw-semibold mb-3 fs-6">
+              Links Rápidos
+            </h4>
+            <div className="d-flex flex-column gap-2">
+              <Link to="/" className="text-gray-600 text-decoration-none">
+                Página Inicial
+              </Link>
+              <Link
+                to="/funcionarios"
+                className="text-gray-600 text-decoration-none"
+              >
+                Funcionários
+              </Link>
+              <Link
+                to="/projeto1"
+                className="text-gray-600 text-decoration-none"
+              >
+                Projeto 1
+              </Link>
+              <Link
+                to="/projeto2"
+                className="text-gray-600 text-decoration-none"
+              >
+                Projeto 2
+              </Link>
+            </div>
+          </Col>
 
-      <div className="footer-bottom">
-        <p>&copy; 2025 TechPro. Todos os direitos reservados.</p>
-      </div>
+          <Col md={3}>
+            <h4 className="text-gray-800 fw-semibold mb-3 fs-6">Contato</h4>
+            <div className="d-flex flex-column gap-2">
+              <a
+                href="mailto:contato@safegirls.com"
+                className="text-gray-600 text-decoration-none"
+              >
+                <i className="bi bi-envelope me-2"></i>
+                contato@safegirls.com
+              </a>
+              <a
+                href="tel:+5511999999999"
+                className="text-gray-600 text-decoration-none"
+              >
+                <i className="bi bi-telephone me-2"></i>
+                (11) 9999-9999
+              </a>
+            </div>
+          </Col>
+        </Row>
+
+        <div className="border-top border-gray pt-4">
+          <p className="text-gray-500 mb-0 small">
+            © 2025 SafeGirls. Todos os direitos reservados.
+          </p>
+        </div>
+      </Container>
     </footer>
   );
 }
